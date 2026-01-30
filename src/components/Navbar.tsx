@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
@@ -45,18 +46,21 @@ const Navbar = () => {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <button
-                onClick={() => scrollToSection(link.href)}
-                className="text-foreground/70 hover:text-primary transition-colors duration-200 text-sm font-medium"
-              >
-                {link.label}
-              </button>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <button
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-foreground/70 hover:text-primary transition-colors duration-200 text-sm font-medium"
+                >
+                  {link.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Button */}
         <button

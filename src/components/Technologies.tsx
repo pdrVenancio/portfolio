@@ -10,7 +10,6 @@ const techCategories = [
       { name: "React", level: 75 },
       { name: "JavaScript", level: 85 },
       { name: "HTML/CSS", level: 90 },
-      { name: "Tailwind", level: 80 },
     ],
   },
   {
@@ -30,7 +29,6 @@ const techCategories = [
       { name: "SQL Server", level: 85 },
       { name: "PostgreSQL", level: 75 },
       { name: "MongoDB", level: 70 },
-      { name: "T-SQL", level: 85 },
     ],
   },
   {
@@ -40,7 +38,6 @@ const techCategories = [
       { name: "Git/GitHub", level: 90 },
       { name: "RabbitMQ", level: 70 },
       { name: "Figma", level: 75 },
-      { name: "REST APIs", level: 90 },
     ],
   },
 ];

@@ -1,14 +1,16 @@
 import { ChevronDown } from "lucide-react";
 import Particles from "./Particles";
+import TextType from './TextType';
 
 const Hero = () => {
-  const scrollToAbout = () => {
-    const element = document.querySelector("#sobre");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+  
+  const messageList = [
+    "Economizei mais de R$ 40 mil em 2 meses automatizando processos internos.",
+    "Impactei diretamente mais de 60 usuários e 8 departamentos com soluções desenvolvidas por mim.", 
+    "Já reduzi processos que levavam dias para poucas horas! Usando código, não promessas.",
+    "Melhorei a escalabilidade de APIs com processamento assíncrono e mensageria."
+  ]
+  
   return (
     <section
       id="hero"
@@ -61,12 +63,16 @@ const Hero = () => {
           Criando aplicações web modernas, integradas e escaláveis
         </p>
 
-        <button
-          onClick={scrollToAbout}
-          className="animate-bounce text-muted-foreground hover:text-primary transition-colors duration-200"
-        >
-          <ChevronDown size={32} />
-        </button>
+        <TextType 
+          text={messageList}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor
+          cursorCharacter="_"
+          deletingSpeed={50}
+          cursorBlinkDuration={0.5}
+        />  
+        
       </div>
     </section>
   );

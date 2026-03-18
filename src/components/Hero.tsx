@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import Particles from "./Particles";
 import TextType from './TextType';
 
@@ -38,30 +37,27 @@ const Hero = () => {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-0">
+      <div className="container mx-auto px-6 relative z-0">
         <p className="font-mono text-muted-foreground mb-4 animate-fade-in">
           {"// Olá, eu sou"}
         </p>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-fade-in-up">
+        <h1 className="text-4xl md:text-8xl lg:text-9xl font-sans font-bold text-foreground mb-6 animate-fade-in-up">
           Pedro Venâncio
         </h1>
 
-        <div className="mb-8 animate-fade-in-up delay-200">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-foreground/80">
-            Desenvolvedor <span className="text-primary font-semibold">Full Stack</span>
+        <div className="mb-3 animate-fade-in-up delay-200">
+          <h2 className="text-1xl md:text-2xl lg:text-3xl font-light text-foreground/80">
+            Desenvolvedor <span className="text-primary font-semibold">Full Stack</span> usando
+            <span className="text-primary"> C# (.net)</span>
+            <span className="text-muted-foreground/80"> &</span>
+            <span className="text-primary"> TypeScript (Angular)</span>
           </h2>
 
-          <div className="flex items-center justify-center gap-3 mt-4 text-xl md:text-2xl font-mono">
-            <span className="text-primary">C#</span>
-            <span className="text-muted-foreground">&</span>
-            <span className="text-primary">Angular</span>
+          <div className="flex gap-3 mt-4 text-xl md:text-2xl text-foreground/80">
           </div>
         </div>
 
-        <p className="text-muted-foreground max-w-xl mx-auto mb-12 text-lg animate-fade-in-up delay-300">
-          Criando aplicações web modernas, integradas e escaláveis
-        </p>
 
         <TextType 
           text={messageList}

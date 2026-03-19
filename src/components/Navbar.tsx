@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "#sobre", label: "Sobre" },
   { href: "#experiencias", label: "Experiências" },
+  { href: "#projetos", label: "Projetos" },
   { href: "#tecnologias", label: "Tecnologias" },
   { href: "#contato", label: "Contato" },
 ];
@@ -12,6 +14,8 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,8 +27,10 @@ const Navbar = () => {
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
+    if (element && location.pathname === "/") {
       element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/${href}`);
     }
     setIsMenuOpen(false);
   };

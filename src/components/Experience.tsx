@@ -51,9 +51,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16">
-          <p className="font-mono text-primary text-sm mb-2">
-            {"// Experiências"}
-          </p>
+          <p className="font-mono text-primary text-sm mb-2">{"// Experiências"}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Onde já trabalhei
           </h2>

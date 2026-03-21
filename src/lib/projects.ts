@@ -39,10 +39,10 @@ export const projects: ProjectSummary[] = [
         "Organizei os dados e criei os endpoints necessários para suportar o algoritmo de matching",
       ],
       technologies: {
-        "Back-end": ["Node.js", "Express"],
+        "Back-end": ["Node.js", "Express" ],
         "Banco de dados": ["PostgreSQL (pg)"],
         "Segurança e autenticação": ["bcrypt", "jsonwebtoken"],
-        "Infraestrutura e utilidades": ["dotenv", "cors", "nodemailer", "nodemon"],
+        "Infraestrutura e utilidades": ["nodemailer"],
         "Integração com IA": [
           "Hugging Face API (sentence-transformers/all-MiniLM-L6-v2)",
         ],
@@ -97,8 +97,8 @@ export const projects: ProjectSummary[] = [
       ],
       technologies: {
         "Front-end": ["React", "TypeScript", "Bootstrap"],
-        "Back-end": ["Python", "Flask"],
-        "Banco de dados": ["PostgreSQL", "SQLAlchemy", "psycopg"],
+        "Back-end": ["Python", "Flask", "SQLAlchemy", "psycopg"],
+        "Banco de dados": ["PostgreSQL"],
       },
       challenges: [
         {

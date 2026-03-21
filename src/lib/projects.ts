@@ -1,4 +1,4 @@
-export type ProjectChallenges = {
+﻿export type ProjectChallenges = {
   title: string;
   description: string;
   details?: string[];
@@ -33,9 +33,9 @@ export const projects: ProjectSummary[] = [
         "O Paduni resolve o desafio da formação manual e aleatória de padrinhos e calouros na Unifei. Em vez de combinações imprevisíveis, a plataforma centraliza preferências, gostos e perfis comportamentais, conectando usuários por afinidades reais e aumentando o engajamento dos recém-chegados com a universidade.",
       role: [
         "Estruturei e desenvolvi a API utilizando Node.js e Express",
-        "Modelei o banco de dados em PostgreSQL e implementei as integrações utilizando a biblioteca pg",
-        "Responsável pela segurança da plataforma, implementei fluxos de autenticação com bcrypt (hashing de senhas) e JWT (tokens de acesso), além de estruturar todo o gerenciamento de usuários e processos de login/cadastro.",
-        "Projetei e automatizei o sistema de envio de e-mails e participei da definição da lógica de pareamento.",
+        "Modelei o banco de dados em PostgreSQL e mantive integrações com a biblioteca pg",
+        "Implementei autenticação segura com bcrypt e JWT e construí os fluxos de cadastro, login e gerenciamento de usuários",
+        "Projetei e automatizei o envio de e-mails e participei da definição da lógica de pareamento",
         "Organizei os dados e criei os endpoints necessários para suportar o algoritmo de matching",
       ],
       technologies: {
@@ -72,7 +72,7 @@ export const projects: ProjectSummary[] = [
             "Manter dados organizados e protegidos foi essencial para que o algoritmo funcionasse com segurança.",
           details: [
             "Estruturei o banco de dados com tabelas claras e relacionamentos preparados para o matching",
-            "Priorizei a segurançaa das informações e a organização do código para facilitar futuras evoluções",
+            "Priorizei a segurança das informações e a organização do código para facilitar futuras evoluções",
           ],
         },
       ],
@@ -80,19 +80,19 @@ export const projects: ProjectSummary[] = [
   },
   {
     slug: "relatorio-ad-hoc",
-    title: "Relatório Ad Hoc - SpaceX Data",
+    title: "Relatório Ad Hoc – SpaceX Data",
     summary:
       "Aplicação flexível que transforma os dados da API da SpaceX em relatórios personalizados, aproximando pesquisa e análise com uma interface mais acessível.",
     githubUrl: "https://github.com/placeholder",
     detailPath: "/projetos/relatorio-ad-hoc",
     detail: {
       overview:
-        "O Relatório Ad Hoc - SpaceX Data oferece uma maneira de montar consultas dinâmicas sobre missões aeroespaciais sem a necessidade de escrever SQL diretamente. A solução é voltada para pesquisadores, divulgadores e estudantes que desejam montar dashboards e analises a partir de dados reais da SpaceX em uma camada visual acessével.",
+        "O Relatório Ad Hoc – SpaceX Data oferece uma maneira de montar consultas dinâmicas sobre missões aeroespaciais sem a necessidade de escrever SQL diretamente. A solução é voltada para pesquisadores, divulgadores e estudantes que desejam montar dashboards e análises a partir de dados reais da SpaceX em uma camada visual acessível.",
       role: [
-        "Constru� a interface em React com TypeScript e componentes reutiliz�veis para sele��o din�mica de tabelas e atributos",
-        "Montei a visualiza��o tabular dos resultados para facilitar a leitura dos relat�rios",
+        "Construí a interface em React com TypeScript e componentes reutilizáveis para seleção dinâmica de tabelas e atributos",
+        "Montei a visualização tabular dos resultados para facilitar a leitura dos relatórios",
         "Desenvolvi a API em Flask, modelando o banco com SQLAlchemy e integrando ao PostgreSQL",
-        "Criei endpoints capazes de gerar relat�rios com filtros avan�ados",
+        "Criei endpoints capazes de gerar relatórios com filtros avançados",
         "Estruturei o schema relacional, executei testes de carga e ajustei a performance",
       ],
       technologies: {
@@ -102,32 +102,32 @@ export const projects: ProjectSummary[] = [
       },
       challenges: [
         {
-          title: "Consultas din�micas e v�lidas",
+          title: "Consultas dinâmicas e válidas",
           description:
-            "Permitir que o usu�rio escolhesse tabelas, colunas e filtros exigiu criar uma estrutura que montasse consultas robustas sem expor SQL cru.",
+            "Permitir que o usuário escolhesse tabelas, colunas e filtros exigiu criar uma estrutura que montasse consultas robustas sem expor SQL cru.",
           details: [
-            "Construi um fluxo que seleciona dinamicamente tabelas e atributos com valida��es em runtime",
-            "Implementei joins autom�ticos entre tabelas para evitar erros e consultas inv�lidas",
+            "Construi um fluxo que seleciona dinamicamente tabelas e atributos com validações em runtime",
+            "Implementei joins automáticos entre tabelas para evitar erros e consultas inválidas",
             "Cuidamos da performance para que consultas complexas continuassem responsivas",
           ],
         },
         {
           title: "Grafo de relacionamentos",
           description:
-            "A l�gica de grafos ajudou a conhecer quais tabelas podiam se conectar e quais caminhos eram os melhores para as jun��es.",
+            "A lógica de grafos ajudou a conhecer quais tabelas podiam se conectar e quais caminhos eram os melhores para as junções.",
           details: [
-            "Mapeei o relacionamento entre tabelas como um grafo para determinar conex�es poss�veis",
-            "Identifiquei os caminhos de join mais diretos para evitar redund�ncia",
-            "O sistema tamb�m evita consultas inv�lidas ao validar se existe um caminho entre as tabelas selecionadas",
+            "Mapeei o relacionamento entre tabelas como um grafo para determinar conexões possíveis",
+            "Identifiquei os caminhos de join mais diretos para evitar redundância",
+            "O sistema também evita consultas inválidas ao validar se existe um caminho entre as tabelas selecionadas",
           ],
         },
         {
-          title: "Experi�ncia intuitiva",
+          title: "Experiência intuitiva",
           description:
-            "Equilibrar alta flexibilidade com uma interface clara foi crucial para aproximar o p�blico leigo do poder da an�lise de dados.",
+            "Equilibrar alta flexibilidade com uma interface clara foi crucial para aproximar o público leigo do poder da análise de dados.",
           details: [
-            "Constru� componentes reutiliz�veis que guiam o usu�rio sem sobrecarregar a tela",
-            "Protegi o backend ao validar entradas e manter a experi�ncia fluida",
+            "Construí componentes reutilizáveis que guiam o usuário sem sobrecarregar a tela",
+            "Protegi o backend ao validar entradas e manter a experiência fluida",
           ],
         },
       ],
@@ -137,41 +137,41 @@ export const projects: ProjectSummary[] = [
     slug: "traveller",
     title: "Traveller",
     summary:
-      "Marketplace de passagens com mapa interativo que destaca destinos e separa experi�ncias entre administradores e usu�rios finais.",
+      "Marketplace de passagens com mapa interativo que destaca destinos e separa experiências entre administradores e usuários finais.",
     githubUrl: "https://github.com/placeholder",
     detailPath: "/projetos/traveller",
     detail: {
       overview:
-        "Traveller torna a compra de passagens a�rea mais visual ao combinar uma lista tradicional com um mapa interativo. Usu�rios exploram destinos diretamente no mapa, enquanto administradores gerenciam ofertas e hist�rico de compras em perfis distintos.",
+        "Traveller torna a compra de passagens aérea mais visual ao combinar uma lista tradicional com um mapa interativo. Usuários exploram destinos diretamente no mapa, enquanto administradores gerenciam ofertas e histórico de compras em perfis distintos.",
       role: [
-        "Desenvolvi toda a interface em React com Vite, focando em componentes din�micos e reutiliz�veis",
-        "Integrei a interface a servi�os de dados e constru� a navega��o entre telas para usu�rio e administrador",
+        "Desenvolvi toda a interface em React com Vite, focando em componentes dinâmicos e reutilizáveis",
+        "Integrei a interface a serviços de dados e construí a navegação entre telas para usuário e administrador",
         "Implementei o mapa interativo para destacar destinos em tempo real",
         "Criei telas de listagem e acompanhamento de passagens",
-        "Colaborei na defini��o da experi�ncia do usu�rio para manter a navega��o simples e eficiente",
+        "Colaborei na definição da experiência do usuário para manter a navegação simples e eficiente",
       ],
       technologies: {
         "Front-end": ["React", "Vite", "Bootstrap"],
-        "Outros conceitos": ["Consumo de APIs", "Componentiza��o", "Gerenciamento de estado"],
+        "Outros conceitos": ["Consumo de APIs", "Componentização", "Gerenciamento de estado"],
       },
       challenges: [
         {
           title: "Mapa interativo funcional",
           description:
-            "Integrar uma biblioteca de mapas e sincroniz�-la com os dados das passagens foi o maior desafio visual do projeto.",
+            "Integrar uma biblioteca de mapas e sincronizá-la com os dados das passagens foi o maior desafio visual do projeto.",
           details: [
-            "Representamos visualmente destinos dispon�veis no mapa com indicadores claros",
-            "Garantimos intera��o fluida e responsiva entre o mapa e a lista de passagens",
-            "Sincronizamos o mapa com as informa��es atualizadas de disponibilidade",
+            "Representamos visualmente destinos disponíveis no mapa com indicadores claros",
+            "Garantimos interação fluida e responsiva entre o mapa e a lista de passagens",
+            "Sincronizamos o mapa com as informações atualizadas de disponibilidade",
           ],
         },
         {
-          title: "Experi�ncia para dois perfis",
+          title: "Experiência para dois perfis",
           description:
-            "A interface precisava ser clara tanto para administradores quanto para usu�rios finais sem perder consist�ncia.",
+            "A interface precisava ser clara tanto para administradores quanto para usuários finais sem perder consistência.",
           details: [
-            "Constru� fluxos espec�ficos para cada perfil mantendo identidade visual uniforme",
-            "Organizei telas que facilitam a tomada de decis�o ao comprar ou gerenciar passagens",
+            "Construí fluxos específicos para cada perfil mantendo identidade visual uniforme",
+            "Organizei telas que facilitam a tomada de decisão ao comprar ou gerenciar passagens",
           ],
         },
       ],

@@ -43,7 +43,8 @@ const About = () => {
                 pdr.venancio1@gmail.com
               </a>
               <a
-                href="tel:+5535998798185"
+                href="https://wa.me/5535998798185?text=Olá,%20vim%20pelo%20seu%20portfólio!"
+                target="_blank"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={16} />

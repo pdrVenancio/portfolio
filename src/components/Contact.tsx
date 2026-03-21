@@ -36,19 +36,22 @@ const Contact = () => {
 
           {/* Phone */}
           <a
-            href="tel:+5535998798185"
+            href="https://wa.me/5535998798185?text=Olá,%20vim%20pelo%20seu%20portfólio!"
+            target="_blank"
             className="group bg-card rounded-xl p-6 border border-border hover:border-primary transition-all duration-300 hover:shadow-lg text-center"
           >
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Phone className="text-primary" size={24} />
             </div>
             <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-            <p className="text-muted-foreground text-sm">(35) 99879-8185</p>
+            <p className="text-muted-foreground text-sm">
+              (35) 99879-8185
+            </p>
           </a>
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/pedro-venancio"
+            href="https://www.linkedin.com/in/pdr-venancio"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-card rounded-xl p-6 border border-border hover:border-primary transition-all duration-300 hover:shadow-lg text-center"

@@ -3,10 +3,10 @@ import { projects } from "@/lib/projects";
 
 const ProjectsSection = () => {
   return (
-    <section id="projetos" className="py-24 bg-background">
+    <section id="projetos" className="pb-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="mb-12 max-w-2xl">
-          <p className="font-mono text-primary text-sm mb-2">{"// Projetos Pessoais"}</p>
+          <p className="font-mono text-primary text-sm mb-2">{"// Experiências"}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Projetos pessoais
           </h2>

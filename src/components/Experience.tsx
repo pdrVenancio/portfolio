@@ -9,11 +9,11 @@ const experiences = [
     description:
       "Atuo no desenvolvimento e manutenção do sistema de controle de acesso, criando novas funcionalidades e integrações entre o backend em .NET Web API e o frontend em Angular.",
     highlights: [
-      "Implementação de endpoints REST e componentes modulares",
-      "Otimizações de performance para maior estabilidade",
+      "Implementação de processamento assíncrono com RabbitMQ para lidar com exportação de relatórios de grande volume, reduzindo a carga da API e melhorando a escalabilidade do sistema.",
+      "Desenvolvimento de relatórios visuais geoespaciais utilizando AGM Maps para rastrear o histórico de localização de pessoas e veículos.",
       "Gerenciamento de entradas e monitoramento de pessoas e veículos",
     ],
-    technologies: ["C# (.NET)", "TypeScript", "Angular", "MongoDB", "Tailwind", "RabbitMQ"],
+    technologies: ["C# (.NET)", "TypeScript", "Angular", "Ionic", "MongoDB", "Tailwind", "RabbitMQ"],
   },
   {
     role: "Desenvolvedor Full Stack",

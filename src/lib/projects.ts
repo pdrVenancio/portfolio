@@ -26,7 +26,7 @@ export const projects: ProjectSummary[] = [
     title: "Paduni",
     summary:
       "Solução para a Unifei que usa dados e IA para formar pares reais entre veteranos e calouros, garantindo afinidade no acompanhamento acadêmico.",
-    githubUrl: "https://github.com/placeholder",
+    githubUrl: "https://github.com/Brenovnc/TrabalhoFinal---PADUNI",
     detailPath: "/projetos/paduni",
     detail: {
       overview:
@@ -83,7 +83,7 @@ export const projects: ProjectSummary[] = [
     title: "Relatório Ad Hoc – SpaceX Data",
     summary:
       "Aplicação flexível que transforma os dados da API da SpaceX em relatórios personalizados, aproximando pesquisa e análise com uma interface mais acessível.",
-    githubUrl: "https://github.com/placeholder",
+    githubUrl: "https://github.com/PedroNB10/bd2-project",
     detailPath: "/projetos/relatorio-ad-hoc",
     detail: {
       overview:
@@ -138,7 +138,7 @@ export const projects: ProjectSummary[] = [
     title: "Traveller",
     summary:
       "Marketplace de passagens com mapa interativo que destaca destinos e separa experiências entre administradores e usuários finais.",
-    githubUrl: "https://github.com/placeholder",
+    githubUrl: "https://github.com/Brenovnc/TrabalhoFinalWeb",
     detailPath: "/projetos/traveller",
     detail: {
       overview:

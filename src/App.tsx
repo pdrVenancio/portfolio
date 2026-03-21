@@ -20,11 +20,10 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/projetos/paduni" element={<Paduni />} />
-            <Route path="/projetos/relatorio-ad-hoc" element={<RelatorioAdHoc />} />
-            <Route path="/projetos/traveller" element={<Traveller />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/portfolio" element={<Index />} />
+            <Route path="/portfolio/projetos/paduni" element={<Paduni />} />
+            <Route path="/portfolio/projetos/relatorio-ad-hoc" element={<RelatorioAdHoc />} />
+            <Route path="/portfolio/projetos/traveller" element={<Traveller />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

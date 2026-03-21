@@ -27,7 +27,7 @@ export const projects: ProjectSummary[] = [
     summary:
       "Solução para a Unifei que usa dados e IA para formar pares reais entre veteranos e calouros, garantindo afinidade no acompanhamento acadêmico.",
     githubUrl: "https://github.com/Brenovnc/TrabalhoFinal---PADUNI",
-    detailPath: "/projetos/paduni",
+    detailPath: "/portfolio/projetos/paduni",
     detail: {
       overview:
         "O Paduni resolve o desafio da formação manual e aleatória de padrinhos e calouros na Unifei. Em vez de combinações imprevisíveis, a plataforma centraliza preferências, gostos e perfis comportamentais, conectando usuários por afinidades reais e aumentando o engajamento dos recém-chegados com a universidade.",
@@ -84,7 +84,7 @@ export const projects: ProjectSummary[] = [
     summary:
       "Aplicação flexível que transforma os dados da API da SpaceX em relatórios personalizados, aproximando pesquisa e análise com uma interface mais acessível.",
     githubUrl: "https://github.com/PedroNB10/bd2-project",
-    detailPath: "/projetos/relatorio-ad-hoc",
+    detailPath: "/portfolio/projetos/relatorio-ad-hoc",
     detail: {
       overview:
         "O Relatório Ad Hoc – SpaceX Data oferece uma maneira de montar consultas dinâmicas sobre missões aeroespaciais sem a necessidade de escrever SQL diretamente. A solução é voltada para pesquisadores, divulgadores e estudantes que desejam montar dashboards e análises a partir de dados reais da SpaceX em uma camada visual acessível.",
@@ -139,7 +139,7 @@ export const projects: ProjectSummary[] = [
     summary:
       "Marketplace de passagens com mapa interativo que destaca destinos e separa experiências entre administradores e usuários finais.",
     githubUrl: "https://github.com/Brenovnc/TrabalhoFinalWeb",
-    detailPath: "/projetos/traveller",
+    detailPath: "/portfolio/projetos/traveller",
     detail: {
       overview:
         "Traveller torna a compra de passagens aérea mais visual ao combinar uma lista tradicional com um mapa interativo. Usuários exploram destinos diretamente no mapa, enquanto administradores gerenciam ofertas e histórico de compras em perfis distintos.",

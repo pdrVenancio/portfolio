@@ -104,7 +104,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
               </Link>
             )}
             <Link
-              to="/#projetos"
+              to="/portfolio/#projetos"
               className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-primary hover:text-primary/70 transition"
             >
               Voltar à página inicial

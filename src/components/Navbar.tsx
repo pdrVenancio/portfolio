@@ -27,10 +27,10 @@ const Navbar = () => {
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element && location.pathname === "/") {
+    if (element && location.pathname === "/portfolio/") {
       element.scrollIntoView({ behavior: "smooth" });
     } else {
-      navigate(`/${href}`);
+      navigate(`/portfolio/${href}`);
     }
     setIsMenuOpen(false);
   };

@@ -134,44 +134,59 @@ export const projects: ProjectSummary[] = [
     },
   },
   {
-    slug: "traveller",
-    title: "Traveller",
+    slug: "pulsar-investimentos",
+    title: "Pulsar Investimentos - Alertas de Mercado em Tempo Real",
     summary:
-      "Marketplace de passagens com mapa interativo que destaca destinos e separa experiências entre administradores e usuários finais.",
-    githubUrl: "https://github.com/Brenovnc/TrabalhoFinalWeb",
-    detailPath: "/portfolio/projetos/traveller",
+      "Sistema de alertas financeiros orientado a eventos que monitora ativos da B3 via yFinance e dispara notificações personalizadas por cliente usando Apache Pulsar, com detecção tanto de regras pontuais de preço quanto de padrões temporais (CEP).",
+    githubUrl: "https://github.com/pdrVenancio/pulsar-investimentos",
+    detailPath: "/portfolio/projetos/pulsar-investimentos",
     detail: {
       overview:
-        "Traveller torna a compra de passagens aérea mais visual ao combinar uma lista tradicional com um mapa interativo. Usuários exploram destinos diretamente no mapa, enquanto administradores gerenciam ofertas e histórico de compras em perfis distintos.",
+        "O Pulsar Investimentos monitora preços de ativos financeiros em tempo real e envia alertas específicos por cliente, sem depender de um banco de dados: todo o estado é mantido nos próprios tópicos do Apache Pulsar. O sistema suporta dois modos de alerta - regras pontuais de preço (ex: 'avise quando PETR4 passar de R$40') via Pulsar Functions deployadas dinamicamente por cliente, e detecção de padrões temporais (quedas ou altas consecutivas, queda percentual em uma janela de tempo) via um worker de Complex Event Processing.",
       role: [
-        "Desenvolvi toda a interface em React com Vite, focando em componentes dinâmicos e reutilizáveis",
-        "Integrei a interface a serviços de dados e construí a navegação entre telas para usuário e administrador",
-        "Implementei o mapa interativo para destacar destinos em tempo real",
-        "Criei telas de listagem e acompanhamento de passagens",
-        "Colaborei na definição da experiência do usuário para manter a navegação simples e eficiente",
+        "Projetei a arquitetura orientada a eventos do zero, decidindo eliminar o banco de dados em favor de manter o estado nos tópicos Pulsar",
+        "Desenvolvi a API em FastAPI responsável por criar/remover assinaturas e fazer deploy de Pulsar Functions em tempo real via Admin REST API",
+        "Implementei o ingestor que consulta o yFinance e compartilha uma única task de polling por ativo entre todos os clientes assinantes",
+        "Construí o CEP Worker em Python nativo para detecção de padrões temporais, após esbarrar em limitações do protocolo Kafka-on-Pulsar ao tentar usar Flink",
+        "Desenvolvi o frontend em React com TypeScript, com interface de alternância entre os dois modos de alerta",
+        "Resolvi múltiplos problemas de ambiente Docker e conectividade entre serviços",
+        "Documentei a arquitetura, tópicos e fluxos de teste via Postman/WebSocket no README",
       ],
       technologies: {
-        "Front-end": ["React", "Vite", "Bootstrap"],
-        "Outros conceitos": ["Consumo de APIs", "Componentização", "Gerenciamento de estado"],
+        "Front-end": ["React", "TypeScript", "Vite"],
+        "Back-end": ["Python", "FastAPI", "yFinance"],
+        "Streaming/Mensageria": ["Apache Pulsar", "Pulsar Functions", "Pulsar Admin REST API"],
+        "Infraestrutura": ["Docker", "Docker Compose"],
       },
       challenges: [
         {
-          title: "Mapa interativo funcional",
+          title: "Arquitetura sem banco de dados",
           description:
-            "Integrar uma biblioteca de mapas e sincronizá-la com os dados das passagens foi o maior desafio visual do projeto.",
+            "Decidi eliminar o banco de dados da arquitetura, mantendo o estado de assinaturas e regras apenas em memória e nos tópicos do Pulsar, simplificando o sistema e reduzindo pontos de falha.",
           details: [
-            "Representamos visualmente destinos disponíveis no mapa com indicadores claros",
-            "Garantimos interação fluida e responsiva entre o mapa e a lista de passagens",
-            "Sincronizamos o mapa com as informações atualizadas de disponibilidade",
+            "Simplifiquei a identidade dos usuários para UUIDs gerados em tempo de assinatura",
+            "Escopei conscientemente a recuperação de falhas para manter o projeto focado no fluxo principal",
+            "Modelei os tópicos Pulsar como a única fonte de verdade do estado do sistema",
           ],
         },
         {
-          title: "Experiência para dois perfis",
+          title: "Detecção de padrões temporais (CEP)",
           description:
-            "A interface precisava ser clara tanto para administradores quanto para usuários finais sem perder consistência.",
+            "A ideia inicial era usar Flink para o processamento de eventos complexos, mas limitações do protocolo Kafka-on-Pulsar exigiram uma reimplementação.",
           details: [
-            "Construí fluxos específicos para cada perfil mantendo identidade visual uniforme",
-            "Organizei telas que facilitam a tomada de decisão ao comprar ou gerenciar passagens",
+            "Identifiquei as limitações do protocolo Kafka-on-Pulsar que inviabilizavam a abordagem original com Flink",
+            "Reimplementei o CEP Worker como um serviço Python nativo, mantendo a detecção de quedas/altas consecutivas e quedas percentuais em janela de tempo",
+            "Mantive a compatibilidade dos alertas gerados com o restante do pipeline de mensageria",
+          ],
+        },
+        {
+          title: "Deploy dinâmico de Pulsar Functions por cliente",
+          description:
+            "Cada assinatura pontual de um cliente precisa de sua própria Pulsar Function, deployada e removida dinamicamente conforme assinaturas são criadas ou canceladas.",
+          details: [
+            "Implementei rotas na API que fazem deploy e remoção de Pulsar Functions via Admin REST API em tempo real",
+            "Criei rotas de debug que expõem o status de execução da função e os estágios internos de processamento (recebimento, filtro de ativo, comparação, alerta)",
+            "Garanti que o ingestor compartilhe o polling de um mesmo ativo entre múltiplos clientes, evitando chamadas redundantes ao yFinance",
           ],
         },
       ],

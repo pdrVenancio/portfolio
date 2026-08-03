@@ -3,11 +3,11 @@ import Footer from "@/components/Footer";
 import ProjectDetailLayout from "@/components/ProjectDetailLayout";
 import { getProjectBySlug, getProjectNeighbors } from "@/lib/projects";
 
-const RelatorioAdHoc = () => {
-  const project = getProjectBySlug("relatorio-ad-hoc");
+const Projeto01 = () => {
+  const project = getProjectBySlug("paduni");
   if (!project) return null;
 
-  const neighbors = getProjectNeighbors("relatorio-ad-hoc");
+  const neighbors = getProjectNeighbors("paduni");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -17,4 +17,4 @@ const RelatorioAdHoc = () => {
   );
 };
 
-export default RelatorioAdHoc;
+export default Projeto01;

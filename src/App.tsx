@@ -6,9 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Paduni from "./pages/projects/Paduni";
-import RelatorioAdHoc from "./pages/projects/RelatorioAdHoc";
-import Traveller from "./pages/projects/Traveller";
+import Projeto01 from "./pages/projects/projeto01";
+import Projeto02 from "./pages/projects/projeto02";
+import Projeto03 from "./pages/projects/projeto03";
 
 const queryClient = new QueryClient();
 
@@ -21,9 +21,9 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/portfolio" element={<Index />} />
-            <Route path="/portfolio/projetos/paduni" element={<Paduni />} />
-            <Route path="/portfolio/projetos/relatorio-ad-hoc" element={<RelatorioAdHoc />} />
-            <Route path="/portfolio/projetos/traveller" element={<Traveller />} />
+            <Route path="/portfolio/projetos/paduni" element={<Projeto01 />} />
+            <Route path="/portfolio/projetos/relatorio-ad-hoc" element={<Projeto02 />} />
+            <Route path="/portfolio/projetos/pulsar-investimentos" element={<Projeto03 />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

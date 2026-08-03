@@ -3,11 +3,11 @@ import Footer from "@/components/Footer";
 import ProjectDetailLayout from "@/components/ProjectDetailLayout";
 import { getProjectBySlug, getProjectNeighbors } from "@/lib/projects";
 
-const Traveller = () => {
-  const project = getProjectBySlug("traveller");
+const Projeto03 = () => {
+  const project = getProjectBySlug("pulsar-investimentos");
   if (!project) return null;
 
-  const neighbors = getProjectNeighbors("traveller");
+  const neighbors = getProjectNeighbors("pulsar-investimentos");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -17,4 +17,4 @@ const Traveller = () => {
   );
 };
 
-export default Traveller;
+export default Projeto03;

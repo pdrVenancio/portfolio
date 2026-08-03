@@ -4,12 +4,12 @@ const techCategories = [
   {
     title: "Front-end",
     icon: Layout,
-    technologies: ["Angular", "TypeScript", "React", "JavaScript", "HTML/CSS"],
+    technologies: ["Angular", "React", "TypeScript", "JavaScript", "HTML/CSS"],
   },
   {
     title: "Back-end",
     icon: Code,
-    technologies: ["C# (.NET)", "Node.js", "Python", "PHP"],
+    technologies: ["C# (.NET)", "Node.js", "Python", "PHP", "RabbitMQ", "Redis", "Apache Pulsar"],
   },
   {
     title: "Banco de Dados",
@@ -19,7 +19,7 @@ const techCategories = [
   {
     title: "Outras Tecnologias",
     icon: Wrench,
-    technologies: ["Git/GitHub", "RabbitMQ", "Figma"],
+    technologies: ["Git/GitHub", "Figma", "Azure DevOps", "Docker"],
   },
 ];
 

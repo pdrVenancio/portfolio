@@ -1,8 +1,13 @@
 import { MapPin, GraduationCap, Mail, Phone } from "lucide-react";
+import aboutLightImage from "@/assets/images/main/about-light.png";
+import aboutDarkImage from "@/assets/images/main/about-dark.png";
 
 const About = () => {
   return (
-    <section id="sobre" className="py-24 bg-card">
+    <section
+      id="sobre"
+      className="relative z-10 -mt-16 bg-card pb-24 before:pointer-events-none before:absolute before:inset-x-0 before:-top-40 before:h-40 before:content-[''] before:bg-gradient-to-b before:from-background/0 before:via-card/70 before:to-card"
+    >
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="mb-16">
@@ -13,7 +18,7 @@ const About = () => {
           <div className="w-20 h-1 bg-primary mt-4 rounded-full" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.85fr)] gap-12 items-center">
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-foreground/80 text-lg leading-relaxed">
@@ -53,8 +58,22 @@ const About = () => {
             </div>
           </div>
 
-          {/* Education Cards */}
-          <div className="space-y-4">
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={aboutLightImage}
+              alt="Ilustração de um desenvolvedor trabalhando em seu setup"
+              className="w-full max-w-xl h-auto object-contain dark:hidden"
+            />
+            <img
+              src={aboutDarkImage}
+              alt="Ilustração de um desenvolvedor trabalhando em seu setup"
+              className="hidden w-full max-w-xl h-auto object-contain dark:block"
+            />
+          </div>
+        </div>
+
+        {/* Education Cards */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 mt-12">
             {/* Education Card 1 */}
             <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/30 transition-colors">
               <div className="flex items-start gap-4">
@@ -109,7 +128,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>

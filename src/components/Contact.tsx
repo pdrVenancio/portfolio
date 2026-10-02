@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
           {/* Email */}
           <a
             href="mailto:pdr.venancio1@gmail.com"

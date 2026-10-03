@@ -68,14 +68,17 @@ const Navbar = () => {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-foreground p-2.5 -mr-2.5"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: tema + botão do menu */}
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle sizeClass="w-11 h-11" />
+          <button
+            className="text-foreground p-2.5 -mr-2.5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

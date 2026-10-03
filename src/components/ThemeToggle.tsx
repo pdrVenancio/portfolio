@@ -2,7 +2,7 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ sizeClass = "w-9 h-9" }: { sizeClass?: string }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -12,14 +12,14 @@ const ThemeToggle = () => {
 
   if (!mounted) {
     return (
-      <div className="w-9 h-9 rounded-full bg-muted/20" />
+      <div className={`${sizeClass} rounded-full bg-muted/20`} />
     );
   }
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative w-9 h-9 rounded-full bg-muted/20 hover:bg-muted/40 flex items-center justify-center transition-colors duration-200"
+      className={`relative ${sizeClass} rounded-full bg-muted/20 hover:bg-muted/40 flex items-center justify-center transition-colors duration-200`}
       aria-label="Alternar tema"
     >
       <Sun

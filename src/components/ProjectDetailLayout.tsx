@@ -61,7 +61,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
   };
 
   return (
-    <section className="min-h-screen bg-background py-16">
+    <section className="min-h-screen bg-background pt-24 pb-16 md:py-16">
       <div className="container mx-auto px-6">
         <div className="flex flex-col gap-12">
           <div>
@@ -73,7 +73,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-border bg-card/80 p-3 text-foreground/80 transition hover:bg-card hover:text-foreground"
+                className="inline-flex items-center justify-center rounded-full border border-border bg-card/80 p-3.5 md:p-3 text-foreground/80 transition hover:bg-card hover:text-foreground"
                 aria-label="Abrir repositório no GitHub"
               >
                 <Github size={18} />
@@ -82,9 +82,9 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
           </div>
 
           <div className="project-detail-grid">
-            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-8 shadow-sm">
-              <p className="text-lg font-semibold text-foreground mb-3">Resumo do projeto</p>
-              <p className="text-foreground/70 text-sm leading-relaxed">
+            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-5 md:p-8 shadow-sm">
+              <p className="text-xl md:text-lg font-semibold text-foreground mb-3">Resumo do projeto</p>
+              <p className="text-foreground/70 text-base md:text-sm leading-relaxed md:leading-relaxed">
                 {project.detail.overview}
               </p>
 
@@ -100,7 +100,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
                       <img
                         src={images[activeImage]}
                         alt={`${project.title} - imagem ${activeImage + 1}`}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-contain md:object-cover"
                       />
                     </button>
 
@@ -109,7 +109,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
                         <button
                           type="button"
                           onClick={goToPreviousImage}
-                          className="rounded-full bg-background/90 p-2 text-foreground shadow-md transition hover:bg-background"
+                          className="rounded-full bg-background/90 p-3 md:p-2 text-foreground shadow-md transition hover:bg-background"
                           aria-label="Imagem anterior"
                         >
                           <ArrowLeft size={18} />
@@ -117,7 +117,7 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
                         <button
                           type="button"
                           onClick={goToNextImage}
-                          className="rounded-full bg-background/90 p-2 text-foreground shadow-md transition hover:bg-background"
+                          className="rounded-full bg-background/90 p-3 md:p-2 text-foreground shadow-md transition hover:bg-background"
                           aria-label="Próxima imagem"
                         >
                           <ArrowRight size={18} />
@@ -163,9 +163,9 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
               />
             </div>
 
-            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-8 shadow-sm">
-              <p className="text-lg font-semibold text-foreground mb-4">Minha atuação</p>
-              <ul className="space-y-3 text-foreground/70 text-sm list-disc list-inside">
+            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-5 md:p-8 shadow-sm">
+              <p className="text-xl md:text-lg font-semibold text-foreground mb-4">Minha atuação</p>
+              <ul className="space-y-3 text-foreground/70 text-base md:text-sm list-disc list-outside pl-5 md:list-inside md:pl-0">
                 {project.detail.role.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -174,17 +174,17 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
           </div>
 
           <div className="project-detail-grid">
-            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-8 shadow-sm">
-              <p className="text-lg font-semibold text-foreground mb-6">Desafios enfrentados</p>
+            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-5 md:p-8 shadow-sm">
+              <p className="text-xl md:text-lg font-semibold text-foreground mb-6">Desafios enfrentados</p>
               <div className="space-y-5">
                 {project.detail.challenges.map((challenge) => (
                   <article key={challenge.title} className="space-y-2">
-                    <p className="text-sm font-semibold text-foreground">{challenge.title}</p>
-                    <p className="text-foreground/70 text-sm leading-relaxed">
+                    <p className="text-base md:text-sm font-semibold text-foreground">{challenge.title}</p>
+                    <p className="text-foreground/70 text-base md:text-sm leading-relaxed md:leading-relaxed">
                       {challenge.description}
                     </p>
                     {challenge.details && (
-                      <ul className="list-disc list-inside text-foreground/70 text-xs space-y-1">
+                      <ul className="list-disc list-outside pl-5 md:list-inside md:pl-0 text-foreground/70 text-sm md:text-xs space-y-1">
                         {challenge.details.map((detail) => (
                           <li key={detail}>{detail}</li>
                         ))}
@@ -195,17 +195,17 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
               </div>
             </div>
 
-            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-8 shadow-sm">
-              <p className="text-lg font-semibold text-foreground mb-6">Tecnologias utilizadas</p>
+            <div className="min-w-0 w-full bg-card border border-border rounded-3xl p-5 md:p-8 shadow-sm">
+              <p className="text-xl md:text-lg font-semibold text-foreground mb-6">Tecnologias utilizadas</p>
               <div className="space-y-5">
                 {Object.entries(project.detail.technologies).map(([category, techList]) => (
                   <div key={category}>
-                    <p className="text-sm font-semibold text-foreground mb-2">{category}</p>
+                    <p className="text-base md:text-sm font-semibold text-foreground mb-2">{category}</p>
                     <div className="flex flex-wrap gap-2">
                       {techList.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs px-3 py-1 bg-muted/30 border border-border rounded-full font-mono text-foreground/80"
+                          className="text-sm md:text-xs px-3 py-1 bg-muted/30 border border-border rounded-full font-mono text-foreground/80"
                         >
                           {tech}
                         </span>
@@ -217,11 +217,11 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-3 md:flex-row md:flex-wrap">
             {neighbors?.prev && (
               <Link
                 to={neighbors.prev.detailPath}
-                className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground/70 hover:border-primary/50 hover:text-foreground transition"
+                className="inline-flex items-center justify-center md:justify-start gap-1 rounded-full border border-border px-4 py-3 md:py-2 text-base md:text-sm font-semibold text-foreground/70 hover:border-primary/50 hover:text-foreground transition"
               >
                 <ArrowLeft size={16} />
                 Projeto anterior
@@ -229,14 +229,14 @@ const ProjectDetailLayout = ({ project, neighbors }: ProjectDetailLayoutProps) =
             )}
             <Link
               to="/portfolio/#projetos"
-              className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-primary hover:text-primary/70 transition"
+              className="inline-flex items-center justify-center md:justify-start gap-1 rounded-full border border-border px-4 py-3 md:py-2 text-base md:text-sm font-semibold text-primary hover:text-primary/70 transition"
             >
               Voltar à página inicial
             </Link>
             {neighbors?.next && (
               <Link
                 to={neighbors.next.detailPath}
-                className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground/70 hover:border-primary/50 hover:text-foreground transition"
+                className="inline-flex items-center justify-center md:justify-start gap-1 rounded-full border border-border px-4 py-3 md:py-2 text-base md:text-sm font-semibold text-foreground/70 hover:border-primary/50 hover:text-foreground transition"
               >
                 Próximo projeto
                 <ArrowRight size={16} />

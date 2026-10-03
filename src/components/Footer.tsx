@@ -8,7 +8,7 @@ const Footer = () => {
           {"<"} Desenvolvido com{" "}
           <span className="text-primary">♥</span> por Pedro Venâncio {"/>"}
         </p>
-        <p className="text-xs text-muted-foreground/50 mt-2">
+        <p className="text-sm md:text-xs text-muted-foreground/50 mt-2">
           © {currentYear} — Todos os direitos reservados
         </p>
       </div>

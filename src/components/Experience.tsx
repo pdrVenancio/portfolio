@@ -47,11 +47,11 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experiencias" className="pt-24 bg-background">
+    <section id="experiencias" className="pt-16 md:pt-24 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="mb-16">
-          <p className="font-mono text-primary text-sm mb-2">{"// Experiências"}</p>
+        <div className="mb-10 md:mb-16">
+          <p className="font-mono text-primary text-base md:text-sm mb-2">{"// Experiências"}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Onde já trabalhei
           </h2>
@@ -74,41 +74,41 @@ const Experience = () => {
               <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
 
               {/* Content */}
-              <div className={`md:w-1/2 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
+              <div className={`md:w-1/2 pl-6 md:pl-0 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                 <div
-                  className={`bg-card rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg ${
+                  className={`bg-card rounded-xl p-5 md:p-6 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg ${
                     exp.current ? "ring-2 ring-primary/20" : ""
                   }`}
                 >
                   {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-start justify-between gap-2 md:gap-0 mb-4">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
-                        <Briefcase size={18} className="text-primary" />
-                        <h3 className="font-bold text-foreground">{exp.role}</h3>
+                        <Briefcase size={18} className="text-primary flex-shrink-0 md:flex-shrink" />
+                        <h3 className="text-lg md:text-base font-bold text-foreground">{exp.role}</h3>
                       </div>
                       <p className="text-primary font-semibold">{exp.company}</p>
                     </div>
                     {exp.current && (
-                      <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                      <span className="px-3 py-1 flex-shrink-0 md:flex-shrink bg-primary/10 text-primary text-sm md:text-xs font-medium rounded-full">
                         Atual
                       </span>
                     )}
                   </div>
 
                   {/* Period */}
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+                  <div className="flex items-center gap-2 text-muted-foreground text-base md:text-sm mb-4">
                     <Calendar size={14} />
                     <span className="font-mono">{exp.period}</span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-foreground/70 text-sm mb-4">{exp.description}</p>
+                  <p className="text-foreground/70 text-base md:text-sm mb-4">{exp.description}</p>
 
                   {/* Highlights */}
                   <ul className="space-y-2 mb-4">
                     {exp.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/60">
+                      <li key={i} className="flex items-start gap-2 text-base md:text-sm text-foreground/60">
                         <ArrowRight size={14} className="text-primary mt-1 flex-shrink-0" />
                         <span>{highlight}</span>
                       </li>
@@ -120,7 +120,7 @@ const Experience = () => {
                     {exp.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 bg-background text-foreground/70 text-xs rounded-md font-mono border border-border"
+                        className="px-2 py-1 bg-background text-foreground/70 text-sm md:text-xs rounded-md font-mono border border-border"
                       >
                         {tech}
                       </span>

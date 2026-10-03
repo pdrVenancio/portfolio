@@ -2,11 +2,11 @@ import { Github, Linkedin, Mail, Phone, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contato" className="py-24 bg-background">
+    <section id="contato" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="font-mono text-primary text-sm mb-2">
+        <div className="text-center mb-10 md:mb-16">
+          <p className="font-mono text-primary text-base md:text-sm mb-2">
             {"// Contato"}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mx-auto">
           {/* Email */}
           <a
             href="mailto:pdr.venancio1@gmail.com"
@@ -28,8 +28,8 @@ const Contact = () => {
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Mail className="text-primary" size={24} />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">Email</h3>
-            <p className="text-muted-foreground text-sm break-all">
+            <h3 className="text-lg md:text-base font-semibold text-foreground mb-1">Email</h3>
+            <p className="text-muted-foreground text-base md:text-sm break-all">
               pdr.venancio1@gmail.com
             </p>
           </a>
@@ -43,8 +43,8 @@ const Contact = () => {
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Phone className="text-primary" size={24} />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-            <p className="text-muted-foreground text-sm">
+            <h3 className="text-lg md:text-base font-semibold text-foreground mb-1">Telefone</h3>
+            <p className="text-muted-foreground text-base md:text-sm">
               (35) 99879-8185
             </p>
           </a>
@@ -59,8 +59,8 @@ const Contact = () => {
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Linkedin className="text-primary" size={24} />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
-            <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
+            <h3 className="text-lg md:text-base font-semibold text-foreground mb-1">LinkedIn</h3>
+            <p className="text-muted-foreground text-base md:text-sm flex items-center justify-center gap-1">
               Pedro Venâncio
               <ExternalLink size={12} />
             </p>
@@ -76,8 +76,8 @@ const Contact = () => {
             <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <Github className="text-primary" size={24} />
             </div>
-            <h3 className="font-semibold text-foreground mb-1">GitHub</h3>
-            <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
+            <h3 className="text-lg md:text-base font-semibold text-foreground mb-1">GitHub</h3>
+            <p className="text-muted-foreground text-base md:text-sm flex items-center justify-center gap-1">
               pdrVenancio
               <ExternalLink size={12} />
             </p>

@@ -25,11 +25,11 @@ const techCategories = [
 
 const Technologies = () => {
   return (
-    <section id="tecnologias" className="py-24 bg-card">
+    <section id="tecnologias" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="mb-16">
-          <p className="font-mono text-primary text-sm mb-2">{"// Tecnologias"}</p>
+        <div className="mb-10 md:mb-16">
+          <p className="font-mono text-primary text-base md:text-sm mb-2">{"// Tecnologias"}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Minhas habilidades
           </h2>
@@ -37,7 +37,7 @@ const Technologies = () => {
         </div>
 
         {/* Tech Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           {techCategories.map((category, index) => (
             <div
               key={index}
@@ -48,16 +48,16 @@ const Technologies = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <category.icon className="text-primary" size={20} />
                 </div>
-                <h3 className="font-bold text-foreground text-lg">
+                <h3 className="font-bold text-foreground text-xl md:text-lg">
                   {category.title}
                 </h3>
               </div>
 
-              <div className="flex flex-wrap gap-3 text-sm text-foreground/90">
+              <div className="flex flex-wrap gap-3 text-base md:text-sm text-foreground/90">
                 {category.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 rounded-full bg-muted/40 border border-border"
+                    className="px-3 py-1.5 md:py-1 rounded-full bg-muted/40 border border-border"
                   >
                     {tech}
                   </span>

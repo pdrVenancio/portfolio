@@ -38,16 +38,16 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-0">
-        <p className="font-mono text-muted-foreground mb-4 animate-fade-in">
+        <p className="font-mono text-lg md:text-base text-muted-foreground mb-4 animate-fade-in">
           {"// Olá, eu sou"}
         </p>
 
-        <h1 className="text-4xl md:text-8xl lg:text-9xl font-sans font-bold text-foreground mb-6 animate-fade-in-up">
+        <h1 className="text-5xl md:text-8xl lg:text-9xl font-sans font-bold text-foreground mb-6 animate-fade-in-up">
           Pedro Venâncio
         </h1>
 
         <div className="mb-3 animate-fade-in-up delay-200">
-          <h2 className="text-1xl md:text-2xl lg:text-3xl font-light text-foreground/80">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-foreground/80">
             Desenvolvedor <span className="text-primary font-semibold">Full Stack</span> usando
             <span className="text-primary"> C# (.net)</span>
             <span className="text-muted-foreground/80"> &</span>
@@ -60,6 +60,7 @@ const Hero = () => {
 
 
         <TextType 
+          className="min-h-[9rem] md:min-h-0"
           text={messageList}
           typingSpeed={75}
           pauseDuration={1500}

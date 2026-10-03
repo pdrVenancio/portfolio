@@ -6,12 +6,12 @@ const About = () => {
   return (
     <section
       id="sobre"
-      className="relative z-10 -mt-16 bg-card pb-24 before:pointer-events-none before:absolute before:inset-x-0 before:-top-40 before:h-40 before:content-[''] before:bg-gradient-to-b before:from-background/0 before:via-card/70 before:to-card"
+      className="relative z-10 -mt-16 bg-card pb-16 md:pb-24 before:pointer-events-none before:absolute before:inset-x-0 before:-top-40 before:h-40 before:content-[''] before:bg-gradient-to-b before:from-background/0 before:via-card/70 before:to-card"
     >
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="mb-16">
-          <p className="font-mono text-primary text-sm mb-2">{"// Sobre mim"}</p>
+        <div className="mb-10 md:mb-16">
+          <p className="font-mono text-primary text-base md:text-sm mb-2">{"// Sobre mim"}</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Quem sou eu
           </h2>
@@ -39,10 +39,10 @@ const About = () => {
             </p>
 
             {/* Contact Info */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-col items-start gap-2 pt-4 md:flex-row md:flex-wrap md:items-stretch md:gap-4">
               <a
                 href="mailto:pdr.venancio1@gmail.com"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 py-2 md:py-0 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={16} />
                 pdr.venancio1@gmail.com
@@ -50,7 +50,7 @@ const About = () => {
               <a
                 href="https://wa.me/5535998798185?text=Olá,%20vim%20pelo%20seu%20portfólio!"
                 target="_blank"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 py-2 md:py-0 text-base md:text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={16} />
                 (35) 99879-8185
@@ -81,13 +81,13 @@ const About = () => {
                   <GraduationCap className="text-primary" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">
+                  <h4 className="text-lg md:text-base font-semibold text-foreground">
                     Bacharel em Sistemas de Informação
                   </h4>
-                  <p className="text-muted-foreground text-sm mt-1">
+                  <p className="text-muted-foreground text-base md:text-sm mt-1">
                     Universidade Federal de Itajubá (UNIFEI)
                   </p>
-                  <p className="text-primary text-xs mt-2 font-mono">
+                  <p className="text-primary text-sm md:text-xs mt-2 font-mono">
                     03/2023 - Previsão 06/2027
                   </p>
                 </div>
@@ -101,13 +101,13 @@ const About = () => {
                   <GraduationCap className="text-primary" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">
+                  <h4 className="text-lg md:text-base font-semibold text-foreground">
                     Técnico em Informática
                   </h4>
-                  <p className="text-muted-foreground text-sm mt-1">
+                  <p className="text-muted-foreground text-base md:text-sm mt-1">
                     Centro de Educação Profissional
                   </p>
-                  <p className="text-primary text-xs mt-2 font-mono">
+                  <p className="text-primary text-sm md:text-xs mt-2 font-mono">
                     01/2018 - 12/2020
                   </p>
                 </div>
@@ -121,8 +121,8 @@ const About = () => {
                   <MapPin className="text-accent-foreground" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Idiomas</h4>
-                  <p className="text-muted-foreground text-sm mt-1">
+                  <h4 className="text-lg md:text-base font-semibold text-foreground">Idiomas</h4>
+                  <p className="text-muted-foreground text-base md:text-sm mt-1">
                     Português (Nativo) • Inglês (Intermediário)
                   </p>
                 </div>

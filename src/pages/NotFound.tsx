@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import imagem404 from "@/assets/images/404/out.png";
 
-const BACKGROUND_IMAGE_URL = "src/assets/images/404/out.png";
+const BACKGROUND_IMAGE_URL = imagem404;
 
 const maskStyle = BACKGROUND_IMAGE_URL
   ? {

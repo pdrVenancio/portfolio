@@ -5,9 +5,9 @@ const Hero = () => {
   
   const messageList = [
     "Economizei mais de R$ 40 mil em 2 meses automatizando processos internos.",
-    "Impactei diretamente mais de 60 usuários e 8 departamentos com soluções desenvolvidas por mim.", 
+    "Impactei mais de 60 usuários em 8 departamentos com soluções desenvolvidas por mim.",
     "Já reduzi processos que levavam dias para poucas horas! Usando código, não promessas.",
-    "Melhorei a escalabilidade de APIs com processamento assíncrono e mensageria."
+    "Hoje crio workflows, relatórios geoespaciais e integrações IoT em uma plataforma industrial."
   ]
   
   return (
@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="mb-3 animate-fade-in-up delay-200">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-foreground/80">
             Desenvolvedor <span className="text-primary font-semibold">Full Stack</span> usando
-            <span className="text-primary"> C# (.net)</span>
+            <span className="text-primary"> C# (.NET)</span>
             <span className="text-muted-foreground/80"> &</span>
             <span className="text-primary"> TypeScript (Angular)</span>
           </h2>

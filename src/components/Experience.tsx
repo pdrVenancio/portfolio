@@ -7,13 +7,16 @@ const experiences = [
     period: "10/2025 – Atual",
     current: true,
     description:
-      "Atuo no desenvolvimento e manutenção do sistema de controle de acesso, criando novas funcionalidades e integrações entre o backend em .NET Web API e o frontend em Angular.",
+      "Atuo no desenvolvimento e na evolução de uma plataforma IoT de controle de acesso e monitoramento de presença de pessoas e veículos em operações industriais, entregando funcionalidades de ponta a ponta entre o backend em .NET Web API e o frontend em Angular.",
     highlights: [
-      "Implementação de processamento assíncrono com RabbitMQ para lidar com exportação de relatórios de grande volume, reduzindo a carga da API e melhorando a escalabilidade do sistema.",
-      "Desenvolvimento de relatórios visuais geoespaciais utilizando AGM Maps para rastrear o histórico de localização de pessoas e veículos.",
-      "Gerenciamento de entradas e monitoramento de pessoas e veículos",
+      "Implementei novas filas e consumers em RabbitMQ para a exportação assíncrona de relatórios, com envio por e-mail e cancelamento de pedidos pendentes.",
+      "Desenvolvi o módulo de workflow de aprovação de horas: geração por executor idempotente (reprocessável sem duplicar registros), aprovação em massa e parcial, comentários e exportação das aprovações.",
+      "Criei relatórios geoespaciais com AGM Maps para rastrear o histórico de localização de pessoas e veículos, com polígonos de locais, trajetórias e uma camada de gateways com status de saúde dos dispositivos.",
+      "Atuei na integração com dispositivos IoT (SmartBadge, IoT Box e MQTT), incluindo os endpoints de associação e desassociação de SmartBadge e ajustes na sincronização offline entre SQLite e MongoDB.",
+      "Construí cadastros com regras de negócio, trilha de auditoria e exportação, como equipamentos com histórico de vínculo a dispositivos, inspeção de veículos, credenciais (tags) e leitores.",
+      "Implementei a liberação manual de pessoas e veículos bloqueados e filtros de múltipla seleção por função e empresa nas telas de auditoria e aderência.",
     ],
-    technologies: ["C# (.NET)", "TypeScript", "Angular", "Ionic", "MongoDB", "Tailwind", "RabbitMQ"],
+    technologies: ["C# (.NET)", "TypeScript", "Angular", "Ionic", "MongoDB", "SQLite", "RabbitMQ", "Redis", "MQTT", "Tailwind", "Azure DevOps"],
   },
   {
     role: "Desenvolvedor Full Stack",
@@ -21,13 +24,13 @@ const experiences = [
     period: "11/2024 – 10/2025",
     current: false,
     description:
-      "Responsável pela manutenção e refatoração de três sistemas críticos, melhorando a agilidade e eficiência dos processos nas equipes de Engenharia.",
+      "Responsável pela manutenção e refatoração de três sistemas críticos, melhorando a agilidade e a eficiência dos processos das equipes de Engenharia de Produto e Engenharia de Componentes.",
     highlights: [
-      "Desenvolvimento de funcionalidades para gestão de cotações de produtos",
-      "Implantação de solução OCR com Python para automação de extração de dados",
-      "Redução do tempo de processamento de dias para horas",
+      "Reduzi de dias para poucas horas o tempo de processamento de tarefas, diminuindo o retrabalho.",
+      "Desenvolvi funcionalidades de gestão de cotações de produtos internos, ampliando o controle e a rastreabilidade das informações.",
+      "Implantei uma solução de OCR com Python para extrair dados de imagens técnicas e convertê-los em tabelas estruturadas.",
     ],
-    technologies: ["JavaScript", "T-SQL", "Python", "PHP", "Bootstrap", "Apache ECharts"],
+    technologies: ["JavaScript", "T-SQL", "Python", "PHP", "Bootstrap", "Apache ECharts", "Figma"],
   },
   {
     role: "Estágio em Desenvolvimento Full Stack",
@@ -35,11 +38,12 @@ const experiences = [
     period: "04/2024 – 11/2024",
     current: false,
     description:
-      "Desenvolvi soluções de automação utilizando aplicações web para otimizar processos internos.",
+      "Desenvolvi soluções de automação com aplicações web para otimizar processos internos. Os resultados levaram à minha efetivação como desenvolvedor.",
     highlights: [
-      "Economia superior a R$ 40K em apenas 2 meses",
-      "Redução de tempo em reuniões e trocas de e-mails",
-      "Impacto em 8 departamentos beneficiando mais de 60 usuários",
+      "Gerei economia superior a R$ 40 mil em apenas 2 meses.",
+      "Impactei 8 departamentos, beneficiando mais de 60 usuários.",
+      "Reduzi o tempo gasto em reuniões e trocas de e-mails, melhorando a agilidade da comunicação entre equipes.",
+      "Fui efetivado poucos meses depois, em reconhecimento aos resultados entregues.",
     ],
     technologies: ["JavaScript", "T-SQL", "PHP", "HTML", "CSS", "Bootstrap"],
   },

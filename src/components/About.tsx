@@ -22,20 +22,22 @@ const About = () => {
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-foreground/80 text-lg leading-relaxed">
-              Desenvolvedor com foco em{" "}
+              Desenvolvedor Full Stack com mais de 2 anos de experiência em{" "}
               <span className="text-primary font-semibold">C# (.NET)</span> e{" "}
               <span className="text-primary font-semibold">TypeScript (Angular)</span>,
-              atuando na criação de aplicações web modernas, integradas e escaláveis.
+              atuando em uma plataforma IoT industrial e em automações corporativas com
+              resultados mensuráveis.
             </p>
             <p className="text-foreground/70 leading-relaxed">
-              Possuo experiência no desenvolvimento de APIs REST e na implementação de
-              interfaces dinâmicas em Angular, aplicando boas práticas de arquitetura e
-              usabilidade. Além disso, tenho conhecimentos em JavaScript, React, Python
-              e T-SQL.
+              Do banco de dados à interface, trabalho com APIs REST em .NET, MongoDB e
+              SQL Server, mensageria com RabbitMQ, telas em Angular e relatórios
+              geoespaciais com mapas, além de integração com dispositivos IoT
+              (SmartBadge, IoT Box e MQTT).
             </p>
             <p className="text-foreground/70 leading-relaxed">
-              Busco constantemente aprimorar minhas habilidades e contribuir para
-              soluções eficientes e de alto impacto.
+              Também tenho conhecimentos em JavaScript, React, Python e T-SQL, e busco
+              constantemente evoluir e contribuir com soluções eficientes e de alto
+              impacto.
             </p>
 
             {/* Contact Info */}
